@@ -1,0 +1,60 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.stone.com.br",
+  "name": "Stone",
+  "description": "Stone is a Brazilian financial technology company offering REST APIs for payment processing, Pix instant payments, digital banking accounts, boleto issuance, credit products, payment links, and stone-terminal management for merchants.",
+  "url": "https://www.stone.com.br",
+  "sameAs": [
+    "https://github.com/stone-payments",
+    "https://www.linkedin.com/company/stone-co",
+    "https://x.com/sejastone"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Stone API Products",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Stone Online API",
+        "description": "Transactional API for authorizing, capturing, canceling, and querying payment transactions for online and physical sales platforms.",
+        "url": "https://online.stone.com.br/docs/o-que-e-o-stone-online",
+        "category": "Payment Processing API"
+      },
+      {
+        "@type": "Offer",
+        "name": "Stone OpenBank API",
+        "description": "Open banking REST API providing digital account management, Pix instant payments, boleto issuance, payment links, and KYC capabilities.",
+        "url": "https://docs.openbank.stone.com.br/docs/",
+        "category": "Open Banking API"
+      },
+      {
+        "@type": "Offer",
+        "name": "Stone Connect API",
+        "description": "API for connecting point-of-sale systems to Stone payment terminals for physical payment acceptance.",
+        "url": "https://www.stone.com.br/devcenter",
+        "category": "POS Integration API"
+      },
+      {
+        "@type": "Offer",
+        "name": "Stone Conciliation API",
+        "description": "Backoffice API for monitoring sales, installments, cancellations, and financial reconciliation data.",
+        "url": "https://www.stone.com.br/devcenter",
+        "category": "Financial Reconciliation API"
+      }
+    ]
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Brazil"
+  },
+  "knowsAbout": [
+    "Payment Processing",
+    "Pix",
+    "Digital Banking",
+    "Boleto",
+    "Financial Technology",
+    "POS Terminals",
+    "Open Banking"
+  ]
+}
