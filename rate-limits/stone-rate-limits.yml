@@ -1,0 +1,45 @@
+name: Stone API Rate Limits
+description: Stone's API rate limiting policies for their payment processing and open banking APIs. Stone does not publicly publish specific numerical rate limits in their documentation. Limits are applied per access token and enforced at the API gateway level. Partners experiencing throttling should contact Stone support or review their partnership agreement terms.
+url: https://docs.openbank.stone.com.br/docs/referencia-da-api/padroes-da-api/
+created: '2026-06-13'
+modified: '2026-06-13'
+rateLimits:
+  - name: Stone OpenBank API Rate Limit
+    description: API requests to Stone's open banking endpoints are rate-limited per OAuth2 access token. Specific numeric thresholds are not publicly documented and are enforced based on partnership tier and transaction volume.
+    url: https://docs.openbank.stone.com.br/docs/referencia-da-api/padroes-da-api/
+    scope: PerToken
+    unit: Requests
+    window: Minute
+    limit: NotPubliclyDocumented
+    headers:
+      - name: Retry-After
+        description: Returned when rate limit is exceeded, indicating the number of seconds to wait before retrying.
+    errorCode: '429'
+    errorMessage: Too Many Requests
+  - name: Stone Online Transaction API Rate Limit
+    description: Rate limits for the Stone Online payment transaction API (charges endpoint). Limits apply per merchant account and are enforced to prevent abuse. Contact Stone technical support for specific thresholds.
+    url: https://online.stone.com.br/reference/overview-da-api
+    scope: PerMerchant
+    unit: Requests
+    window: Minute
+    limit: NotPubliclyDocumented
+    headers:
+      - name: Retry-After
+        description: Returned when limit is exceeded.
+    errorCode: '429'
+    errorMessage: Too Many Requests
+  - name: Pix API Rate Limit
+    description: Rate limits for Pix instant payment operations through Stone's OpenBank API. Pix transactions are subject to both Stone-level rate limits and Brazilian Central Bank (BACEN) regulations on Pix operations.
+    url: https://docs.openbank.stone.com.br/docs/referencia-da-api/pix/apis-stone/
+    scope: PerToken
+    unit: Requests
+    window: Minute
+    limit: NotPubliclyDocumented
+    notes: Brazilian Central Bank (BACEN) Pix regulations impose additional limits on daily transaction amounts and velocity checks independent of API rate limits.
+notes:
+  - Stone does not publish specific rate limit numbers in their public developer documentation.
+  - Rate limits are enforced via OAuth2 access token scope and may vary by partnership tier.
+  - Contact Stone's technical support or partnership team for specific rate limit allocations.
+  - Sandbox environments may have different (typically more restrictive) rate limits than production.
+  - Pix transactions are additionally governed by BACEN regulations which impose separate transaction velocity and amount limits.
+  - Authentication token endpoint rate limits apply independently of data API rate limits.

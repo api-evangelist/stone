@@ -1,0 +1,104 @@
+aid: stone
+name: Stone
+description: Stone is a Brazilian financial technology company offering REST APIs for payment processing, Pix instant payments, digital banking accounts, boleto issuance, credit products, payment links, and stone-terminal management for merchants. Their platform enables businesses to authorize, capture, cancel, and query transactions across online and physical sales channels.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/stone/refs/heads/main/apis.yml
+created: '2026-06-13'
+modified: '2026-06-13'
+specificationVersion: '0.19'
+tags:
+  - Payments
+  - Fintech
+  - Pix
+  - Brazil
+  - Digital Banking
+  - Payment Processing
+  - Boleto
+  - Financial Technology
+apis:
+  - name: Stone Online API
+    description: The Stone Online transactional API for authorizing, capturing, canceling, and querying payment transactions for online and physical sales platforms. Supports credit card, debit, and voucher payments with sandbox and production environments.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://online.stone.com.br/docs/o-que-e-o-stone-online
+    baseURL: https://online.stone.com.br
+    tags:
+      - Payments
+      - Transactions
+      - Authorization
+      - Capture
+      - Cancel
+    properties:
+      - type: Documentation
+        url: https://online.stone.com.br/docs/o-que-e-o-stone-online
+      - type: Reference
+        url: https://online.stone.com.br/reference/overview-da-api
+  - name: Stone OpenBank API
+    description: Stone's open banking REST API providing digital account management, internal and external transfers, Pix instant payments, boleto issuance, payment links, QR code generation, contacts, receipts, KYC, recharges, and scheduling capabilities for fintech integrations.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://docs.openbank.stone.com.br/docs/
+    baseURL: https://sandbox.openbank.stone.com.br
+    tags:
+      - Pix
+      - Digital Banking
+      - Transfers
+      - Boleto
+      - Payment Links
+      - KYC
+      - Recharges
+    properties:
+      - type: Documentation
+        url: https://docs.openbank.stone.com.br/docs/
+      - type: Reference
+        url: https://docs.openbank.stone.com.br/docs/referencia-da-api/
+  - name: Stone Connect API
+    description: API for connecting point-of-sale systems to Stone payment terminals (maquininhas), enabling merchants to integrate physical payment acceptance into their business software.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.stone.com.br/devcenter
+    baseURL: https://www.stone.com.br
+    tags:
+      - POS
+      - Terminal
+      - Physical Payments
+      - Merchants
+    properties:
+      - type: Documentation
+        url: https://www.stone.com.br/devcenter
+  - name: Stone Conciliation API
+    description: Backoffice API for monitoring sales, installments, cancellations, and financial reconciliation data for Stone merchants.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.stone.com.br/devcenter
+    baseURL: https://www.stone.com.br
+    tags:
+      - Conciliation
+      - Financial Reporting
+      - Backoffice
+      - Reconciliation
+    properties:
+      - type: Documentation
+        url: https://www.stone.com.br/devcenter
+common:
+  - type: Website
+    url: https://www.stone.com.br
+  - type: Documentation
+    url: https://docs.openbank.stone.com.br/docs/
+  - type: GitHubOrg
+    url: https://github.com/stone-payments
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/stone-co
+  - type: Blog
+    url: https://conteudo.stone.com.br/
+  - type: Pricing
+    url: https://www.stone.com.br/devcenter
+  - type: StatusPage
+    url: https://docs.openbank.stone.com.br
+  - type: X
+    url: https://x.com/sejastone
+  - type: Plans
+    url: plans/stone-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/stone-rate-limits.yml
+  - type: FinOps
+    url: finops/stone-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

@@ -1,0 +1,64 @@
+name: Stone Plans and Pricing
+description: Stone offers payment processing solutions for Brazilian merchants with pricing based on transaction fees rather than fixed monthly subscription tiers. Fees vary by product type, transaction volume, and merchant category. Access to developer APIs is available through the Stone Partner Program and developer center.
+url: https://www.stone.com.br/devcenter
+created: '2026-06-13'
+modified: '2026-06-13'
+plans:
+  - name: Stone Merchant Account
+    description: Standard payment processing account for merchants accepting card payments via Stone terminals and online channels. Transaction fees apply per payment processed.
+    url: https://www.stone.com.br
+    type: PayAsYouGo
+    pricing:
+      - type: TransactionFee
+        description: Per-transaction fee applied to card payments processed through Stone terminals and online APIs. Rate varies by card type, installment plan, and merchant volume.
+        unit: PerTransaction
+        currency: BRL
+    features:
+      - Card payment acceptance (credit, debit, voucher)
+      - Online transaction API access
+      - Physical POS terminal integration
+      - Conciliation and financial reporting API
+      - Technical support via Stone Partner Program
+  - name: Stone OpenBank Developer Access
+    description: Access to Stone's open banking APIs for fintech partners building digital account and Pix payment integrations. Available through partnership agreement with Stone.
+    url: https://docs.openbank.stone.com.br/docs/
+    type: Partnership
+    pricing:
+      - type: Custom
+        description: Pricing negotiated per partnership agreement. Contact Stone's partnership team at parcerias@openbank.stone.com.br for terms.
+        unit: Custom
+        currency: BRL
+    features:
+      - Digital account management APIs
+      - Pix instant payment APIs (send and receive)
+      - Boleto issuance API
+      - Payment links API
+      - QR code generation
+      - KYC verification (Alpha)
+      - Recharges API (mobile, gaming, digital content)
+      - Transfer scheduling API
+      - Contacts and institution management
+      - Sandbox environment for testing
+      - Webhook notifications
+  - name: Stone Partner Program
+    description: Technical partnership program for developers and companies integrating with Stone's payment infrastructure. Includes access to APIs, SDKs, technical certification, and dedicated support.
+    url: https://partner.stone.com.br/
+    type: Partner
+    pricing:
+      - type: Free
+        description: No cost to join the Stone Partner Program. Revenue sharing and transaction fees apply based on volume processed.
+        unit: None
+        currency: BRL
+    features:
+      - API and SDK access
+      - Technical integration support
+      - Homologation and certification process
+      - Access to 1500+ developer community
+      - Regular developer events and talks
+      - Stone Connect API for POS integration
+      - Android SDK for mobile POS solutions
+notes:
+  - Stone pricing is primarily transaction-fee-based rather than subscription-based, typical for Brazilian payment processors.
+  - Pix transactions via the Brazilian Central Bank instant payment network have zero cost mandated by BACEN regulation for many transaction types.
+  - Boleto fees and installment plans have different fee structures negotiated per merchant agreement.
+  - Detailed pricing requires direct contact with Stone sales: 3004-9681.

@@ -1,0 +1,63 @@
+name: Stone FinOps
+description: Financial operations guidance for organizations integrating with Stone's payment APIs in Brazil. Covers cost management, transaction fee optimization, currency considerations, Pix economics, boleto costs, and financial governance for Stone API consumers.
+url: https://www.stone.com.br/devcenter
+created: '2026-06-13'
+modified: '2026-06-13'
+currency: BRL
+region: Brazil
+considerations:
+  - name: Transaction Fee Model
+    description: Stone operates on a per-transaction fee model rather than flat monthly subscriptions. All costs are directly tied to payment volume, making cost forecasting dependent on transaction volume projections. Monitor transaction volumes closely to project API costs accurately.
+    type: CostModel
+    impact: High
+  - name: Pix Zero-Cost Mandate
+    description: Brazilian Central Bank (BACEN) mandates that Pix transactions between natural persons (individuals) are free of charge. Business-to-individual Pix payments (like refunds) may also be free. However, business Pix transactions (empresa-para-empresa) may incur fees per Stone's merchant agreement. Leverage Pix for cost reduction where regulations permit zero-cost transactions.
+    type: CostOptimization
+    impact: High
+    url: https://docs.openbank.stone.com.br/docs/referencia-da-api/pix/
+  - name: Installment Plan Fee Structure
+    description: Credit card payments processed in installments (parcelamento) carry different fee structures than single-payment transactions. Installment transactions may include additional fees for each installment period. Model the full installment fee lifecycle when calculating true transaction costs for merchants offering parcelamento.
+    type: CostModel
+    impact: Medium
+  - name: Sandbox Cost Isolation
+    description: Stone provides a sandbox environment for development and testing at no transactional cost. All API testing and integration development should be performed exclusively in the sandbox environment to avoid incurring unnecessary real transaction fees during development cycles.
+    type: CostReduction
+    impact: Medium
+    url: https://docs.openbank.stone.com.br/sandbox/docs/referencia-da-api/dados-da-conta/overview-a/
+  - name: Boleto Fee Considerations
+    description: Boleto (bank slip) issuance and processing carries per-boleto fees in addition to standard transaction fees. Boletos have an expiration date and unpaid boletos still incur issuance costs. Consider boleto cancellation costs and abandoned boleto rates when estimating total cost of payment acceptance via this method.
+    type: CostModel
+    impact: Medium
+    url: https://docs.openbank.stone.com.br/docs/referencia-da-api/emissao-de-boletos/
+  - name: OAuth Token Management
+    description: Stone's OpenBank API uses OAuth2 access tokens for authentication. Tokens have expiry periods and require renewal. Implement proper token caching and refresh logic to avoid excessive token generation API calls, which could contribute to rate limit consumption and operational overhead.
+    type: Efficiency
+    impact: Low
+    url: https://docs.openbank.stone.com.br/docs/guias/token-de-acesso/
+  - name: Webhook vs Polling Cost
+    description: Stone supports webhook notifications for transaction events. Using webhooks instead of polling the API for transaction status reduces API call volume, decreasing rate limit consumption and improving cost efficiency. Configure webhooks for all asynchronous transaction status updates.
+    type: CostOptimization
+    impact: Medium
+  - name: BRL Currency Operations
+    description: All Stone API transactions are denominated in Brazilian Real (BRL). Foreign entities integrating with Stone must account for BRL/local currency conversion costs, FX risk, and Brazilian financial regulations (IOF tax on foreign exchange). Integrate FX hedging considerations into total cost of ownership calculations.
+    type: ComplianceCost
+    impact: High
+  - name: Conciliation API for Cost Reconciliation
+    description: Stone provides a Conciliation API for monitoring sales, installments, cancellations, and financial data. Use this API to implement automated financial reconciliation, identify disputed transactions early, and accurately account for all transaction fees in financial reporting systems.
+    type: Governance
+    impact: Medium
+    url: https://www.stone.com.br/devcenter
+  - name: Partnership Tier Negotiation
+    description: Stone's fee structures for high-volume merchants and OpenBank API partners are negotiable. Organizations with significant transaction volumes should engage Stone's partnership team to negotiate favorable fee rates, which can substantially reduce unit transaction costs at scale.
+    type: CostOptimization
+    impact: High
+    url: https://partner.stone.com.br/
+recommendations:
+  - Prioritize Pix for eligible transaction types to leverage zero-cost or low-cost instant payment rails mandated by BACEN.
+  - Use sandbox environment for all pre-production development and testing to eliminate test transaction costs.
+  - Implement webhook listeners for transaction events rather than polling to optimize API call efficiency.
+  - Cache OAuth2 access tokens for their full validity period to minimize token refresh API calls.
+  - Engage Stone partnership team early to negotiate volume-based fee reductions if projecting high transaction volumes.
+  - Integrate Stone's Conciliation API into financial operations workflows for accurate fee tracking and reconciliation.
+  - Monitor boleto abandonment rates and set appropriate expiry windows to minimize wasted issuance fees.
+  - Account for Brazilian IOF tax and FX conversion costs if integrating from outside Brazil.
