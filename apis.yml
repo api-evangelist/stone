@@ -77,6 +77,8 @@ apis:
       - type: Documentation
         url: https://www.stone.com.br/devcenter
 common:
+  - type: DomainSecurity
+    url: security/stone-domain-security.yml
   - type: Website
     url: https://www.stone.com.br
   - type: Documentation

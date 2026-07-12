@@ -1,0 +1,28 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.stone.com.br
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug  2 12:30:33 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: online.stone.com.br
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  4 11:09:47 2026 GMT
+  hsts: null
+- host: docs.openbank.stone.com.br
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 20 15:46:18 2026 GMT
+  hsts: true
+  hsts_max_age: 31556952
+domains:
+- domain: stone.com.br
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: reject
