@@ -15,17 +15,14 @@
       "source": "https://conteudo.stone.com.br/feed/",
       "feed_url": "https://conteudo.stone.com.br/feed/",
       "title": "",
-      "saved": 10,
+      "saved": 0,
       "method": "feed"
     },
     {
       "source": "https://www.linkedin.com/company/stone-co",
-      "feed_url": "https://www.linkedin.com/company/stone-co",
-      "title": "",
-      "saved": 0,
-      "method": "none"
+      "error": "HTTPError"
     }
   ],
-  "fetched": "2026-06-27T12:03:07Z",
-  "post_count": 16
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 30
 }
