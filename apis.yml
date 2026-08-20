@@ -35,6 +35,12 @@ apis:
     baseURL: https://online.stone.com.br
     tags:
       - Payments
+      - Transaction
+      - Authorization
+      - Capture
+      - Cancel
+    tags_raw:
+      - Payments
       - Transactions
       - Authorization
       - Capture
@@ -68,6 +74,11 @@ apis:
     humanURL: https://www.stone.com.br/devcenter
     baseURL: https://www.stone.com.br
     tags:
+      - Point-of-Sale
+      - Terminal
+      - Physical Payments
+      - Merchants
+    tags_raw:
       - POS
       - Terminal
       - Physical Payments
@@ -81,6 +92,11 @@ apis:
     humanURL: https://www.stone.com.br/devcenter
     baseURL: https://www.stone.com.br
     tags:
+      - Conciliation
+      - Financial Reporting
+      - Back Office
+      - Reconciliation
+    tags_raw:
       - Conciliation
       - Financial Reporting
       - Backoffice
