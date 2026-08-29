@@ -1,6 +1,17 @@
 aid: stone
 name: Stone
 description: Stone is a Brazilian financial technology company offering REST APIs for payment processing, Pix instant payments, digital banking accounts, boleto issuance, credit products, payment links, and stone-terminal management for merchants. Their platform enables businesses to authorize, capture, cancel, and query transactions across online and physical sales channels.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: approval
