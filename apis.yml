@@ -85,7 +85,7 @@ apis:
     humanURL: https://www.stone.com.br/devcenter
     baseURL: https://www.stone.com.br
     tags:
-      - Point-of-Sale
+      - POS
       - Terminal
       - Physical Payments
       - Merchants
