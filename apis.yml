@@ -83,7 +83,6 @@ apis:
     description: API for connecting point-of-sale systems to Stone payment terminals (maquininhas), enabling merchants to integrate physical payment acceptance into their business software.
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.stone.com.br/devcenter
-    baseURL: https://www.stone.com.br
     tags:
       - Point-of-Sale
       - Terminal
@@ -101,7 +100,6 @@ apis:
     description: Backoffice API for monitoring sales, installments, cancellations, and financial reconciliation data for Stone merchants.
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.stone.com.br/devcenter
-    baseURL: https://www.stone.com.br
     tags:
       - Conciliation
       - Financial Reporting
