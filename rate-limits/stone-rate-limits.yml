@@ -1,3 +1,8 @@
+# Provenance stamped 2026-10-07 (roadmap#943): written by an API Evangelist sweep (dated 2026-06-13 by the file itself), not
+# harvested from the provider. `method: generated` so the economics campaign may replace it with a
+# dated, verbatim transcription; every figure below is unverified until it does.
+method: generated
+generated: '2026-06-13'
 name: Stone API Rate Limits
 description: Stone's API rate limiting policies for their payment processing and open banking APIs. Stone does not publicly publish specific numerical rate limits in their documentation. Limits are applied per access token and enforced at the API gateway level. Partners experiencing throttling should contact Stone support or review their partnership agreement terms.
 url: https://docs.openbank.stone.com.br/docs/referencia-da-api/padroes-da-api/
