@@ -67,3 +67,30 @@ notes:
   - Pix transactions via the Brazilian Central Bank instant payment network have zero cost mandated by BACEN regulation for many transaction types.
   - Boleto fees and installment plans have different fee structures negotiated per merchant agreement.
   - Detailed pricing requires direct contact with Stone sales: 3004-9681.
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - metered
+  - negotiated
+  units: []
+  plans:
+  - name: Stone Merchant Account
+    access: other
+    model: metered
+    model_how: stated
+    units: []
+    periods: []
+  - name: Stone OpenBank Developer Access
+    access: partner
+    model: negotiated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Stone Partner Program
+    access: partner
+    model: free
+    model_how: derived
+    units: []
+    periods: []
