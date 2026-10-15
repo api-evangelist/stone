@@ -50,3 +50,119 @@
     detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
+- slug: stone-open-finance-brasil-functional-certification
+  label: Open Finance Brasil functional certification
+  partner_name: Open Finance Brasil functional certification
+  category: open finance conformance (Brazil)
+  type: register
+  channel: regulator-register
+  evidence: https://data.directory.openbankingbrasil.org.br/participants
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: Open Finance Brasil directory, per-family CertificationStatus (submissions in github.com/OpenBanking-Brasil/conformance)
+    spec_file: null
+    standard: Open Finance Brasil
+    role: certified-participant
+    registrations:
+    - registered_name: STONE PAGAMENTOS S.A.
+      register_id: a3cec8d6-65b1-529d-bac5-9892d0c4efa3
+      cnpj: '16501555000157'
+      matched_domain: stone.com.br
+      matched_by: domain
+    certified_products:
+    - product: accounts
+      families:
+      - accounts
+      status: Self-Certified
+      expires: '2027-07-27'
+      certification_uri: https://github.com/OpenBanking-Brasil/conformance/blob/main/submissions/functional/accounts/2.5.1/16501555_STONE_API_ACCOUNTS_V2_5_1_accounts_v2.5.1_23-07-2026.json
+    - product: credit
+      families:
+      - loans
+      status: Self-Certified
+      expires: '2027-05-26'
+      certification_uri: https://github.com/OpenBanking-Brasil/conformance/blob/main/submissions/functional/loans/2.5.0/16501555_Loans-v2.5.0_loans_v2.5.0_22-10-2025.json
+    - product: customer-data
+      families:
+      - consents
+      - customers-business
+      - customers-personal
+      - resources
+      status: Self-Certified
+      expires: '2027-04-30'
+      certification_uri: https://github.com/OpenBanking-Brasil/conformance/blob/main/submissions/functional/consents/3.0.0/16501555_Stone-AS-v1.0.0_consents_v3.0_04-04-2024.json
+    - product: investments
+      families:
+      - bank-fixed-incomes
+      status: Self-Certified
+      expires: '2027-03-16'
+      certification_uri: https://github.com/OpenBanking-Brasil/conformance/blob/main/submissions/functional/bank-fixed-incomes/1.0.4/16501555_bank-fixed-income-v1.0.4_bank-fixed-incomes-timezone_v1.0.4_20-10-2025.json
+    - product: open-data
+      families:
+      - channels_branches
+      - channels_electronic-channels
+      - channels_phone-channels
+      - opendata-accounts_business-accounts
+      - opendata-accounts_personal-accounts
+      - opendata-acquiring-services_businesses
+      - opendata-acquiring-services_personals
+      - opendata-investments_bank-fixed-incomes
+      - opendata-loans_business-loans
+      - opendata-loans_personal-loans
+      status: Self-Certified
+      expires: '2027-10-14'
+      certification_uri: https://web.conformance.directory.openbankingbrasil.org.br/plan-detail.html?plan=uL7ppqLd2gGxS&public=true
+    - product: payments
+      families:
+      - enrollments
+      - payments-consents
+      - payments-pix
+      status: Self-Certified
+      expires: '2027-08-01'
+      certification_uri: https://github.com/OpenBanking-Brasil/conformance/blob/main/submissions/functional/enrollments/2.2.0/16501555_Stone_JSR_v2.2_enrollments_v2.2.0_04-02-2026.json
+    - product: recurring-payments
+      families:
+      - payments-pix-recurring-payments
+      - payments-pix-recurring-payments-automatic
+      - payments-recurring-consents
+      - payments-recurring-consents-automatic
+      status: Self-Certified
+      expires: '2026-11-03'
+      certification_uri: https://github.com/OpenBanking-Brasil/conformance/blob/main/submissions/functional/automatic-payments/2.0.0/16501555_Pagamentos-Autom%C3%A1ticos-v2.0.0_automatic-payments_v2.0.0_29-04-2025.json
+    signal_note: one entry per PRODUCT TYPE, lapsed flagged; family counts are context, never read
+    detected_by: sweep-latam-open-finance.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: stone-pix-banco-central-do-brasil
+  label: Pix (Banco Central do Brasil)
+  partner_name: Pix (Banco Central do Brasil)
+  category: instant payments (Brazil)
+  type: register
+  channel: regulator-register
+  evidence: https://www.bcb.gov.br/estabilidadefinanceira/participantespix
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: Pix participants (Banco Central do Brasil, https://www.bcb.gov.br/content/estabilidadefinanceira/participantes_pix/lista-participantes-instituicoes-em-adesao-pix-20261015.csv)
+    spec_file: null
+    standard: Pix
+    role: pix-participant
+    registrations:
+    - registered_name: STONE IP S.A.
+      ispb: '16501555'
+      cnpj: 16.501.555/0001-57
+      institution_type: Instituição de Pagamento
+      spi_participation: Direta
+      pix_participation: Facultativa
+      pix_modality: Provedor de Conta Transacional
+      payment_initiation: false
+      matched_domain: stone.com.br
+      matched_by: domain
+      identity: Open Finance Brasil directory, same CNPJ 16501555000157 ('STONE PAGAMENTOS S.A.')
+    signal_note: 'participation only: the domain comes from a labelled lookup (registrations[].identity)'
+    detected_by: sweep-latam-open-finance.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
